@@ -1,1 +1,35 @@
 @import './utils/fonts';
+@import './utils/variables';
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #e5e5e5;
+}
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.dashboard {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+@import './blocks/titles';
+@import './blocks/btn';
+@import './blocks/logo';
+@import './blocks/nav';
+@import './blocks/premium';
+@import './blocks/main';
+@import './blocks/header';
+@import './blocks/cards';
+@import './blocks/card';

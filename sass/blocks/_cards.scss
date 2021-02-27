@@ -1,0 +1,177 @@
+.cards {
+    width: 50%;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 28px;
+    padding: 10px 30px 35px 15px;
+    margin-left: 30px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 13px;
+
+        &-left {
+            width: 70%;
+        }
+        &-right{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-right: 21px;
+        border-right: 1px solid #EBEBEB;
+    }
+
+    &__arrow {
+        &_left {
+            transform: rotateY(-180deg);
+        }
+    }
+
+    &__limit {
+        width: 82%;
+        margin-left: 23px;
+        margin-top: 32px;
+
+        &-gutter {
+            width: 100%;
+            height: 10px;
+            background: #f1f1f1;
+            border-radius: 14px;
+        }
+
+        &-bar {
+            width: 32%;
+            height: 100%;
+            background: $primary;
+            border-radius: 10px;
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        &-weekly {
+            font-family: "Suprema", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: $inactive;
+        }
+
+        &-value {
+            font-family: "Lato", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: $text-primary;
+        }
+    }
+
+    &__balance {
+        &-value {
+            font-family: 'Lato', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: $primary;
+            text-align: right;
+
+            & span {
+                font-size: 18px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__income {
+        margin-top: 13px;
+
+        &-value {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: right;
+            color: #439A86;
+
+            & span {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__outcome {
+        margin-top: 13px;
+
+        &-value {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: right;
+            color: #BB4430;
+
+            & span {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__deactivate {
+        margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+        & label {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 24px;
+            border-radius: 14px;
+            background: #EBEBEB;
+            cursor: pointer;
+            
+            & span {
+                display: block;
+                width: 24px;
+                height: 24px;
+                background: $inactive;
+                border-radius: 100%;
+                transition: all .5s;
+            }
+
+            & input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+                display: block;
+                width: 0;
+                height: 0;
+            }
+            & input[type="checkbox"]:checked + span{
+              background: $primary;
+              transform: translateX(100%);
+            }
+            // & input[type="checkbox"] + span{
+            //   background: $inactive;
+            //   transform: translateX(0%);
+            // }
+        }
+    }
+
+    &__descr {
+        font-family: 'Suprema', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: $inactive;
+        text-align: right;
+        margin-top: 5px;
+    }
+}

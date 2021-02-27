@@ -1,0 +1,64 @@
+.nav {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 50px 40px;
+    border-right: 1px solid #EBEBEB;
+
+    &__menu {
+        width: 100%;
+        list-style: none;
+        margin-bottom: 100px;
+
+        &-item {
+            display: block;
+            width: 100%;
+        }
+
+        &-link {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: $inactive;
+            text-decoration: none;
+            padding: 10px 0 10px 10px;
+            border-radius: 4px;
+            transition: all .3s;
+
+            & span {
+                margin-left: 17px;
+            }
+
+            & path {
+                transition: all .3s;
+            }
+
+            & rect {
+                fill: transparent;
+            }
+
+            &:hover {
+                color: $primary;
+                background: #F0F7FF;
+
+                & path {
+                    stroke: $primary;
+                }
+            }
+
+            &_active {
+                color: $primary;
+
+                & path {
+                    stroke: $primary;
+                }
+            }
+        }
+    }
+}

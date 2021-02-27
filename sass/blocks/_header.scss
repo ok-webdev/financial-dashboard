@@ -1,0 +1,105 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+
+        & a {
+            display: block;
+            text-decoration: none;
+        }
+
+        &-name {
+            font-family: "Suprema", sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: $text-primary;
+        }
+
+        &-account {
+            font-family: "Suprema", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: $inactive;
+        }
+    }
+
+    &__mail,
+    &__notification {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        transition: all .3s;
+    }
+
+    &__notification {
+        & path {
+            transition: all .3s;
+
+            &:hover {
+                fill: $text-primary;
+            }
+        }
+
+        &_new {
+            &::after {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                top: 2px;
+                right: 4px;
+                border-radius: 100%;
+                background: #BB4430;
+            }
+        }
+    }
+
+    &__mail {
+        & path {
+            &:hover {
+                fill: $text-primary;
+            }
+        }
+
+        height: 28px;
+        align-items: start;
+
+        &_new {
+            &::after {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                top: 2px;
+                right: -1px;
+                border-radius: 100%;
+                background: #BB4430;
+            }
+        }
+    }
+
+    &__avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        background: #FFC145;
+        margin-right: 10px;
+    }
+}
