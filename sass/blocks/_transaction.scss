@@ -1,0 +1,56 @@
+.transaction {
+    grid-area: transactions;
+    // width: 50%;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 28px;
+    padding: 10px 30px 35px 15px;
+    margin-left: 30px;
+    margin-top: 30px;
+
+    &__table {
+        width: 100%;
+        font-family: 'Suprema', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: $text-primary;
+        margin-top: 18px;
+
+        & thead {
+            text-align: left;
+            color: $inactive;
+        }
+
+        & td {
+            padding: 13px 0;
+            border-bottom: 0.5px solid #ECECEC;
+        }
+    }
+
+    &__receiver {
+        display: flex;
+        align-items: center;
+
+        & img {
+            width: 17px;
+            height: 17px;
+            padding: 5px;
+            background: #efefef;
+            border-radius: 5px;
+            margin-right: 8px;
+        }
+    }
+
+    &__type {
+        color: $inactive;
+    }
+
+    &__date {
+        color: $inactive;
+    }
+
+    &__amount {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        text-align: right;
+    }
+}

@@ -1,15 +1,14 @@
 .nav {
     width: 20%;
-    height: 100%;
+    max-height: 1080px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     padding: 50px 40px;
     border-right: 1px solid #EBEBEB;
 
     &__menu {
-        width: 100%;
         list-style: none;
         margin-bottom: 100px;
 

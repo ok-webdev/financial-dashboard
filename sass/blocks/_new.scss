@@ -1,0 +1,97 @@
+.new {
+    width: 65%;
+    padding: 10px 14px 35px 15px;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 28px;
+    &__content {
+        margin-top: 15px;
+    }
+
+    &__users {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    &__user {
+        width: 42px;
+        margin-right: 12px;
+
+        &-link {
+            text-decoration: none;
+        }
+
+        &-img {
+            width: 42px;
+            height: 42px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        &-name {
+            display: block;
+            font-family: 'Suprema', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: $inactive;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2px;
+        }
+    }
+
+    &__add {
+        text-decoration: none;
+        align-self: flex-end;
+
+        &-img {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: $btn-color;
+            padding: 6px;
+            margin: 0 auto;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__transfer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+
+    &__input {
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+        color: $inactive;
+        border: none;
+        outline: transparent;
+        
+
+        &-label {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            color: $text-primary;
+            border: 1px solid $primary;
+            border-radius: 8px;
+            padding: 4px 10px;
+            margin-right: 10px;
+        }
+
+        &-currency {
+            cursor: pointer;
+            color: $inactive;
+        }
+    }
+}

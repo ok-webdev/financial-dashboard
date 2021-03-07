@@ -1,0 +1,57 @@
+@media screen and (max-width: 1400px) {
+  .main{
+    grid-template-areas: "header"
+    "cards"
+    "goals"
+    "transactions"
+    "statistics"
+    "money";
+    
+  }
+  .cards,
+  .transaction{
+    margin-left: 0;
+  }
+  .logo{
+    &__text{
+      display: none;
+    }
+  }
+  .nav {
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    &__menu{
+      position: sticky;
+      top: 35%;
+      &-item{
+        & span {
+          display: none;
+        }
+      }
+      &-link{
+        padding: 10px;
+      }
+    }
+  }
+  .premium{
+    position: absolute;
+    bottom: 0%;
+    align-items: center;
+    &__image{
+      display: none;
+    }
+    &__text{
+      display: none;
+    }
+    & .btn{
+      & span {
+        display: none;
+      }
+    }
+  }
+  .new{
+    width: 45%;
+    margin-right: 5%;
+  }
+}

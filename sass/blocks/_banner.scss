@@ -1,0 +1,18 @@
+.banner {
+    grid-area: banner;
+    display: block;
+    width: 158px;
+    height: 183px;
+    background: url(../img/bg-banner.svg) top 5px left -10px/90% no-repeat, linear-gradient(180deg, #ED654C 0%, #ED654C 100%);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    font-family: 'Suprema', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: $card-text;
+    text-align: left;
+    padding: 10px 16px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+}
