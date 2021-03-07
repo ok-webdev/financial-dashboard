@@ -9,6 +9,7 @@
 }
 
 body{
+  position: relative;
   background: #e5e5e5;
 }
 .container {
@@ -27,6 +28,7 @@ body{
 
 @import './blocks/titles';
 @import './blocks/btn';
+@import './blocks/input';
 @import './blocks/logo';
 @import './blocks/nav';
 @import './blocks/premium';
@@ -40,6 +42,7 @@ body{
 @import './blocks/money';
 @import './blocks/new';
 @import './blocks/banner';
+@import './blocks/modal';
 
 
 @import './utils/media';

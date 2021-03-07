@@ -274,42 +274,45 @@
                 <!-- /.transaction -->
                 <div class="goals">
                     <h3 class="title title__h3">
-                        Goals <a href="#"><img src="icons/icon-plus.svg" alt="Add new goal" /></a> 
+                        Goals <a href="#" id="add-goal"><img src="icons/icon-plus.svg" alt="Add new goal" /></a>
                     </h3>
                     <div class="goals__content">
-                        <div class="goals__card">
-                            <div class="goals__goal">
-                                <p class="goals__sum">$550</p>
-                                <p class="goals__date">12/20/20</p>
+                        <div class="goals__cards">
+                            <div class="goals__card">
+                                <div class="goals__goal">
+                                    <p class="goals__sum">$550</p>
+                                    <p class="goals__date">12/20/20</p>
+                                </div>
+                                <div class="goals__name">
+                                    <img src="icons/icon-mountain.svg" alt="Holidays image" />
+                                    <p>Holidays</p>
+                                </div>
                             </div>
-                            <div class="goals__name">
-                                <img src="icons/icon-mountain.svg" alt="Holidays image" />
-                                <p>Holidays</p>
+                            <!-- /.goals__card -->
+                            <div class="goals__card">
+                                <div class="goals__goal">
+                                    <p class="goals__sum">$200</p>
+                                    <p class="goals__date">12/20/20</p>
+                                </div>
+                                <div class="goals__name">
+                                    <img src="icons/icon-brush.svg" alt="Brush image" />
+                                    <p>Renovation</p>
+                                </div>
                             </div>
+                            <!-- /.goals__card -->
+                            <div class="goals__card">
+                                <div class="goals__goal">
+                                    <p class="goals__sum">$820</p>
+                                    <p class="goals__date">12/20/20</p>
+                                </div>
+                                <div class="goals__name">
+                                    <img src="icons/icon-joystick.svg" alt="Joystick image" />
+                                    <p>Xbox</p>
+                                </div>
+                            </div>
+                            <!-- /.goals__card -->
                         </div>
-                        <!-- /.goals__card -->
-                        <div class="goals__card">
-                            <div class="goals__goal">
-                                <p class="goals__sum">$200</p>
-                                <p class="goals__date">12/20/20</p>
-                            </div>
-                            <div class="goals__name">
-                                <img src="icons/icon-brush.svg" alt="Brush image" />
-                                <p>Renovation</p>
-                            </div>
-                        </div>
-                        <!-- /.goals__card -->
-                        <div class="goals__card">
-                            <div class="goals__goal">
-                                <p class="goals__sum">$820</p>
-                                <p class="goals__date">12/20/20</p>
-                            </div>
-                            <div class="goals__name">
-                                <img src="icons/icon-joystick.svg" alt="Joystick image" />
-                                <p>Xbox</p>
-                            </div>
-                        </div>
-                        <!-- /.goals__card -->
+                        <!-- /.goals__cards -->
                         <div class="goals__arrow">
                             <a href="#"><img src="img/arrow.png" alt="left" /></a>
                         </div>
@@ -428,9 +431,9 @@
                             </div>
                             <!-- /.new__users -->
                             <form action="#" class="new__transfer">
-                                <label for="transfer-value" class="new__input-label">
-                                    <input type="text" placeholder="0" id="transfer-value" class="new__input">
-                                    <span class="new__input-currency">$</span>
+                                <label for="transfer-value" class="input-label">
+                                    <input type="text" placeholder="0" id="transfer-value" class="input">
+                                    <span class="input-currency">$</span>
                                 </label>
                                 <button class="btn">
                                     Send the transfer
@@ -454,6 +457,27 @@
         <!-- /.dashboard -->
     </div>
     <!-- /.container -->
+    <div class="overlay">
+        <div class="modal modal-goal">
+            <p class="title title__h3">Add your goal</p>
+            <form class="modal-goal__form">
+                <label for="goal-sum" class="input-label input-label_modal">
+                    <input type="number" id="goal-sum" class="input input_modal" placeholder="Add goal sum" required>
+                </label>
+                <label for="goal-date" class="input-label input-label_modal">
+                    <input type="date" id="goal-date" class="input input_modal" placeholder="Add goal date" required>
+                </label>
+                <label for="goal-name" class="input-label input-label_modal">
+                    <input type="text" id="goal-name" class="input input_modal" placeholder="Add goal name" required>
+                </label>
+                <button class="btn" id="modal-submit">Add new goal</button>
+            </form>
+            <!-- /.modal-goal__form -->
+            <span class="modal__close">&times;</span>
+        </div>
+        <!-- /.modal-goal -->
+    </div>
+    <!-- /.overlay -->
     <script src="js/main.js"></script>
 </body>
 
