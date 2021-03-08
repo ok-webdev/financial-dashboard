@@ -432,10 +432,10 @@
                             <!-- /.new__users -->
                             <form action="#" class="new__transfer">
                                 <label for="transfer-value" class="input-label">
-                                    <input type="text" placeholder="0" id="transfer-value" class="input">
+                                    <input type="number" placeholder="0" id="transfer-value" class="input" required>
                                     <span class="input-currency">$</span>
                                 </label>
-                                <button class="btn">
+                                <button class="btn" id="transfer-btn">
                                     Send the transfer
                                     <img src="icons/icon-arrow-small.svg" alt="Arrow image">
                                 </button>
@@ -476,6 +476,14 @@
             <span class="modal__close">&times;</span>
         </div>
         <!-- /.modal-goal -->
+        <div class="modal modal__transfer">
+            <p class="title title__h3">Result</p>
+            <div class="modal__transfer-result">
+                
+            </div>
+            <span class="modal__close">&times;</span>
+        </div>
+        <!-- /.modal-transfer -->
     </div>
     <!-- /.overlay -->
     <script src="js/main.js"></script>

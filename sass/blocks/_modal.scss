@@ -29,6 +29,19 @@
         font-weight: 600;
         cursor: pointer;
     }
+    &__transfer {
+      top: auto;
+      bottom: 20%;
+      &-result{
+        &-value{
+          font-family: "Suprema", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          color: $text-primary;
+          margin-top: 20px;
+        }
+      }
+    }
 }
 
 

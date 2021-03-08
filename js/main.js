@@ -20,29 +20,35 @@ window.addEventListener('DOMContentLoaded', () => {
         modalInputDate = document.querySelector('#goal-date'),
         modalInputName = document.querySelector('#goal-name'),
         modalCloseBtn = document.querySelectorAll('.modal__close'),
-        goalsContainer = document.querySelector('.goals__cards');
-        console.log(goalsContainer);
-    function showModalGoal() {
+        goalsContainer = document.querySelector('.goals__cards'),
+        transferInput = document.querySelector('#transfer-value'),
+        modalTransfer = document.querySelector('.modal__transfer'),
+        transferResultContainer = document.querySelector('.modal__transfer-result'),
+        newTransfer = document.querySelector('.new__transfer');
+        
+    function showModal(whichModal) {
         overlay.classList.add('active');
-        modalGoal.classList.add('active');
+        whichModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
-    function hideModalGoal() {
+    function hideModal(whichModal) {
         overlay.classList.remove('active');
-        modalGoal.classList.remove('active');
+        whichModal.classList.remove('active');
+        document.body.style.overflow = '';
     }
     addGoalBtn.addEventListener('click', () => {
-        showModalGoal();
+        showModal(modalGoal);
     });
 
     overlay.addEventListener('click', (event) => {
         if (event.target == overlay || event.target == modalCloseBtn) {
-            hideModalGoal();
+            hideModal(modalGoal);
         }
     });
     modalCloseBtn.forEach((item) => {
         item.addEventListener('click', () => {
-            hideModalGoal();
+            hideModal(modalGoal);
         })
     });
 
@@ -64,7 +70,20 @@ window.addEventListener('DOMContentLoaded', () => {
             modalInputSum.value = '';
             modalInputDate.value = '';
             modalInputName.value = '';
-            hideModalGoal();
+            hideModal(modalGoal);
         }
     });
+
+
+    newTransfer.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if(transferInput.value) {
+        transferResultContainer.innerHTML = `<p class="modal__transfer-result-value">Your ${transferInput.value}$ are not yours anymore ;-)</p>`;;
+        showModal(modalTransfer);
+        transferInput.value = '';
+        setTimeout(()=>{
+            hideModal(modalTransfer);
+        }, 5000)
+      }
+    })
 });
