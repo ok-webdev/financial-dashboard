@@ -1,15 +1,3 @@
-// const limitBar = document.querySelector('.cards__limit-bar'),
-//       limitSpent = document.querySelector('.cards__limit-value-spent'),
-//       limitTotal = document.querySelector('.cards__limit-value-total');
-
-// function limit () {
-//   let sum = limitBar.style.width = `${(limitSpent.textContent * 100)/ limitTotal.textContent}%`;
-
-//   return sum;
-// }
-
-// limit();
-
 'use strict'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -54,10 +42,11 @@ window.addEventListener('DOMContentLoaded', () => {
             hideModal(modalGoal);
         })
     });
+
     function addSlide() {
-        
+
     }
-   
+
 
 
     newTransfer.addEventListener('submit', (e) => {
@@ -92,7 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
         centeredSlides: true,
         loop: true,
         cssMode: true,
-        
+
         // Navigation arrows
         navigation: {
             prevEl: '.goals__arrow_left',

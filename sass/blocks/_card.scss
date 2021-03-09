@@ -8,10 +8,12 @@
     margin: 0 10px;
     color: $card-text;
     box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.3);
-    &_red{
+
+    &_red {
         background: url(../img/cloud.png) 100% 100% no-repeat,
-        linear-gradient(180deg, #bd1919 0%, #bd1919 100%);
+            linear-gradient(180deg, #bd1919 0%, #bd1919 100%);
     }
+
     &__subtitle {
         font-family: "Suprema", sans-serif;
         font-size: 8px;

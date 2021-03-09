@@ -2,9 +2,9 @@
     width: 100%;
     display: grid;
     grid-template-areas: "header header"
-                        "cards goals"
-                        "cards statistics"
-                        "transactions statistics"
-                        "transactions money";
+        "cards goals"
+        "cards statistics"
+        "transactions statistics"
+        "transactions money";
     grid-gap: 30px 20px;
 }

@@ -5,11 +5,12 @@
     border-radius: 28px;
     padding: 10px 30px 35px 15px;
     margin-left: 30px;
-    
-    &__slider{
+
+    &__slider {
         max-width: 600px;
         min-width: 0;
     }
+
     &__content {
         min-width: 0;
         display: flex;

@@ -7,9 +7,10 @@
     border: none;
     outline: transparent;
 
-    &_modal{
-      font-size: 16px;
+    &_modal {
+        font-size: 16px;
     }
+
     &-label {
         width: 50%;
         display: flex;
@@ -23,9 +24,10 @@
         border-radius: 8px;
         padding: 4px 10px;
         margin-right: 10px;
-        &_modal{
-          width: 100%;
-          margin: 15px 0;
+
+        &_modal {
+            width: 100%;
+            margin: 15px 0;
         }
     }
 
