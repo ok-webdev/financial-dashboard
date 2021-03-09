@@ -1,7 +1,5 @@
 # Financial dashboard
 
-# Financial dashboard
-
 - HTML
 - CSS
   - Scss
@@ -10,4 +8,4 @@
  
   
  
-[GH-pages] (https://ok-webdev.github.io/financial-dashboard/)
+[GH-pages](https://ok-webdev.github.io/financial-dashboard/)
