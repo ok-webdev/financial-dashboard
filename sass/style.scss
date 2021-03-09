@@ -1,3 +1,4 @@
+@import './libs/swiper';
 @import './utils/fonts';
 @import './utils/variables';
 *,
@@ -23,8 +24,6 @@ body{
   background: #ffffff;
   border-radius: 50px;
 }
-
-
 
 @import './blocks/main';
 @import './blocks/titles';

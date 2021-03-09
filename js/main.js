@@ -13,6 +13,7 @@
 'use strict'
 
 window.addEventListener('DOMContentLoaded', () => {
+
     const addGoalBtn = document.querySelector('#add-goal'),
         overlay = document.querySelector('.overlay'),
         modalGoal = document.querySelector('.modal-goal'),
@@ -25,7 +26,8 @@ window.addEventListener('DOMContentLoaded', () => {
         modalTransfer = document.querySelector('.modal__transfer'),
         transferResultContainer = document.querySelector('.modal__transfer-result'),
         newTransfer = document.querySelector('.new__transfer');
-        
+
+
     function showModal(whichModal) {
         overlay.classList.add('active');
         whichModal.classList.add('active');
@@ -41,6 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
         showModal(modalGoal);
     });
 
+
     overlay.addEventListener('click', (event) => {
         if (event.target == overlay || event.target == modalCloseBtn) {
             hideModal(modalGoal);
@@ -51,11 +54,56 @@ window.addEventListener('DOMContentLoaded', () => {
             hideModal(modalGoal);
         })
     });
+    function addSlide() {
+        
+    }
+   
+
+
+    newTransfer.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (transferInput.value) {
+            transferResultContainer.innerHTML = `<p class="modal__transfer-result-value">Your ${transferInput.value}$ are not yours anymore ;-)</p>`;;
+            showModal(modalTransfer);
+            transferInput.value = '';
+            setTimeout(() => {
+                hideModal(modalTransfer);
+            }, 5000)
+        }
+    })
+
+    const cardsSwiper = new Swiper('.cards__slider', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.cards__arrow_right',
+            prevEl: '.cards__arrow_left',
+        },
+    });
+
+    const goalsSwiper = new Swiper('.goals__content', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
+        centeredSlides: true,
+        loop: true,
+        cssMode: true,
+        
+        // Navigation arrows
+        navigation: {
+            prevEl: '.goals__arrow_left',
+            nextEl: '.goals__arrow_right',
+        },
+    });
 
     modalGoal.addEventListener('submit', () => {
         if (modalInputSum.value && modalInputDate.value && modalInputName) {
             const newGoal = document.createElement('div');
-            newGoal.classList.add('goals__card');
+            newGoal.classList.add('goals__card', 'swiper__slide');
             newGoal.innerHTML = `
                 <div class="goals__goal">
                   <p class="goals__sum">$${modalInputSum.value}</p>
@@ -66,7 +114,8 @@ window.addEventListener('DOMContentLoaded', () => {
                   <p>${modalInputName.value}</p>
                 </div>
               `;
-            goalsContainer.append(newGoal);
+            // goalsContainer.append(newGoal);
+            goalsSwiper.prependSlide(newGoal);
             modalInputSum.value = '';
             modalInputDate.value = '';
             modalInputName.value = '';
@@ -74,16 +123,4 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
-    newTransfer.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if(transferInput.value) {
-        transferResultContainer.innerHTML = `<p class="modal__transfer-result-value">Your ${transferInput.value}$ are not yours anymore ;-)</p>`;;
-        showModal(modalTransfer);
-        transferInput.value = '';
-        setTimeout(()=>{
-            hideModal(modalTransfer);
-        }, 5000)
-      }
-    })
 });
